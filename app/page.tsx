@@ -132,7 +132,7 @@ function ProjectSection() {
 
   React.useEffect(() => {
     fetch("https://api.github.com/users/fadilyadd/repos?per_page=100&sort=updated&type=public", {
-      headers: { Authorization: `Bearer ${process.env.GH_TOKEN}` },
+      headers: { Authorization: `Bearer ${process.env.NEXT_PUBLIC_GH_TOKEN}` },
     })
       .then(r => r.json())
       .then(data => { if (Array.isArray(data)) setRepos(data); })
