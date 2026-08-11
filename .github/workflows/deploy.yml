@@ -34,9 +34,9 @@ jobs:
         run: npm install
 
       - name: Build
-        run: GH_TOKEN=${{ vars.GH_TOKEN }} npm run build
+        run: npm run build
         env:
-          GH_TOKEN: ${{ vars.GH_TOKEN }}
+          NEXT_PUBLIC_GH_TOKEN: ${{ vars.NEXT_PUBLIC_GH_TOKEN }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
